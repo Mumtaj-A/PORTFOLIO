@@ -3923,7 +3923,7 @@ html:not(.js-enabled) .contact-form-card {
         transform: translateX(-50%);
 
         width: 92%;
-        max-width: 300px;
+        max-width: 250px;
         height: 76px;
 
         display: flex;

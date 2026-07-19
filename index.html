@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mumtaj Ali - Professional Web Designer & Developer. Specializing in modern web development, UI/UX design, and full-stack solutions. Based in Chandigarh, India."
+    />
+    <meta
+      name="keywords"
+      content="web designer, web developer, portfolio, Mumtaj Ali, Laravel developer, frontend developer, UI/UX designer"
+    />
+    <meta name="author" content="Mumtaj Ali" />
+    <title>Mumtaj Ali | Web Developer & UI Designer</title>
+    <link rel="stylesheet" href="PersonalPort.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style-switcher.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Background Elements -->
+    <div class="bg-animation">
+      <canvas
+        id="three-portfolio-scene"
+        class="three-scene-canvas"
+        aria-hidden="true"
+      ></canvas>
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <!-- =========================
+     Premium Floating Navbar
+========================== -->
+    <nav class="navbar" id="navbar">
+      <!-- Mouse Glow -->
+      <div class="nav-glow"></div>
+
+      <div class="nav-container">
+        <!-- ========= LOGO ========= -->
+        <a href="#home" class="navbar-brand">
+          <div class="brand-icon">
+            <span>MA</span>
+          </div>
+
+          <div class="brand-content">
+            <h2>Mumtaj Ali</h2>
+            <span>Full Stack Developer</span>
+          </div>
+        </a>
+
+        <!-- ========= MENU ========= -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              <span>About</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#services" class="nav-link">
+              <span>Services</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">
+              <span>Projects</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- ========= RIGHT SIDE ========= -->
+        <div class="nav-actions">
+          <div class="availability">
+            <span class="status-dot"></span>
+            <span>Available</span>
+          </div>
+
+          <a
+            href="assets/cv.pdf"
+            download="Mumtaj_Ali_Resume.pdf"
+            class="resume-btn"
+          >
+            Resume
+
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- ========= MOBILE ========= -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="mobile-nav">
+      <a href="#home" class="mobile-link active">
+        <div class="icon-box">
+          <i class="fas fa-home"></i>
+        </div>
+        <span>Home</span>
+      </a>
+
+      <a href="#about" class="mobile-link">
+        <div class="icon-box">
+          <i class="fas fa-user"></i>
+        </div>
+        <span>About</span>
+      </a>
+
+      <a href="#services" class="mobile-link">
+        <div class="icon-box">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <span>Services</span>
+      </a>
+
+      <a href="#portfolio" class="mobile-link">
+        <div class="icon-box">
+          <i class="fas fa-images"></i>
+        </div>
+        <span>Portfolio</span>
+      </a>
+
+      <a href="#contact" class="mobile-link">
+        <div class="icon-box">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <span>Contact</span>
+      </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <i class="fas fa-code"></i>
+              <span>Interactive 3D Portfolio</span>
+            </div>
+            <h1 class="hero-title">
+              <span class="greeting">Hello, I'm</span>
+              <span class="name-highlight">Mumtaj Ali</span>
+              <span class="profession"
+                >I'm a
+                <span class="typing-text typing">Web Designer</span></span
+              >
+            </h1>
+            <p class="hero-description">
+              Crafting modern, responsive, and scalable web applications that
+              deliver seamless user experiences.
+            </p>
+            <div class="hero-trust" aria-label="Availability and focus">
+              <span class="trust-pill">
+                <i class="fas fa-circle-check"></i>
+                <span>Available for freelance work</span>
+              </span>
+              <span class="trust-pill">
+                <i class="fas fa-bolt"></i>
+                <span>Focused on polished, high-conversion experiences</span>
+              </span>
+            </div>
+            <div class="hero-highlights" aria-label="Key strengths">
+              <div class="highlight-pill">
+                <i class="fas fa-layer-group"></i>
+                <span>Responsive Web Apps</span>
+              </div>
+              <div class="highlight-pill">
+                <i class="fas fa-rocket"></i>
+                <span>Fast, Clean Delivery</span>
+              </div>
+              <div class="highlight-pill">
+                <i class="fas fa-globe"></i>
+                <span>Remote Ready</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">
+                <span>Hire Me</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#portfolio" class="btn-secondary">
+                <span>View Work</span>
+                <i class="fas fa-briefcase"></i>
+              </a>
+            </div>
+            <div class="hero-social">
+              <a
+                href="https://github.com/Mumtaj-A"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/mumtaj-ali-03865328b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://fb.com/ali.mumtaz.338658"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://wa.me/919151542665"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-wrapper depth-card">
+              <div class="image-glow"></div>
+              <img
+                src="assets/frontphoto.png"
+                alt="Mumtaj Ali"
+                class="profile-image"
+              />
+              <div class="floating-badge badge-1">
+                <i class="fas fa-code"></i>
+                <span>Web Dev</span>
+              </div>
+              <div class="floating-badge badge-2">
+                <i class="fas fa-paint-brush"></i>
+                <span>UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Get to Know Me</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-content-card">
+              <div class="card-header">
+                <h3>
+                  I'm <span class="accent-text">Mumtaj Ali</span> and I'm a
+                  <span class="accent-text">Web Developer</span>
+                </h3>
+              </div>
+              <p class="about-text">
+                I'm a web developer focused on building practical, polished web
+                experiences from interface to database. I work with HTML, CSS,
+                JavaScript, Python, MySQL, PHP, and Laravel to create responsive
+                frontends, dependable backends, and simple workflows that feel
+                clear to the people using them.
+              </p>
+              <div class="info-grid">
+                <div class="info-card">
+                  <span class="info-label">Focus</span>
+                  <span class="info-value">Web Apps & Dashboards</span>
+                </div>
+                <div class="info-card">
+                  <span class="info-label">Core Stack</span>
+                  <span class="info-value">Laravel, PHP, MySQL, JS</span>
+                </div>
+                <div class="info-card">
+                  <span class="info-label">Working Style</span>
+                  <span class="info-value">Responsive, clean, reliable</span>
+                </div>
+                <div class="info-card">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Chandigarh, India</span>
+                </div>
+              </div>
+              <div class="achievements-strip" aria-label="Key achievements">
+                <div class="achievement-card">
+                  <span class="achievement-value">6+</span>
+                  <span class="achievement-label">Projects built</span>
+                </div>
+                <div class="achievement-card">
+                  <span class="achievement-value">100%</span>
+                  <span class="achievement-label">Responsive focus</span>
+                </div>
+                <div class="achievement-card">
+                  <span class="achievement-value">24h</span>
+                  <span class="achievement-label">Typical response</span>
+                </div>
+              </div>
+              <div class="action-buttons">
+                <a
+                  href="assets/cv.pdf"
+                  download="Mumtaj_Ali_Resume.pdf"
+                  class="btn-outline"
+                >
+                  <i class="fas fa-download"></i>
+                  <span>Download CV</span>
+                </a>
+                <a href="#contact" class="btn-primary">
+                  <i class="fas fa-envelope"></i>
+                  <span>Hire Me</span>
+                </a>
+              </div>
+            </div>
+            <div class="skills-card">
+              <h3 class="skills-title">Skills & Expertise</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="80"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percent">55%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="55"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">76%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="76"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">What I Can Do For You</h2>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-description">
+                Business websites and web applications built with clean
+                structure, responsive layouts, and maintainable code.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+              </div>
+              <h3 class="service-title">UI/UX Design</h3>
+              <p class="service-description">
+                User-friendly screens, flows, and layouts that make products
+                easier to understand and more comfortable to use.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Database Management</h3>
+              <p class="service-description">
+                Organized database structures, queries, and data workflows with
+                attention to reliability, speed, and maintainability.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Frontend Development</h3>
+              <p class="service-description">
+                Interactive interfaces with HTML, CSS, and JavaScript that work
+                smoothly across desktop, tablet, and mobile devices.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Backend Development</h3>
+              <p class="service-description">
+                Server-side features, admin panels, and API-ready foundations
+                using PHP, Laravel, Python, and MySQL.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+              </div>
+              <h3 class="service-title">Responsive Design</h3>
+              <p class="service-description">
+                Mobile-first layouts that keep content readable, navigation
+                simple, and interactions consistent on every screen size.
+              </p>
+              <div class="service-link">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-strip" aria-label="Tools and technologies">
+            <div class="tools-strip-title">Tools I work with</div>
+            <div class="tools-pills">
+              <span class="tool-pill">HTML</span>
+              <span class="tool-pill">CSS</span>
+              <span class="tool-pill">JavaScript</span>
+              <span class="tool-pill">PHP</span>
+              <span class="tool-pill">Laravel</span>
+              <span class="tool-pill">MySQL</span>
+              <span class="tool-pill">Python</span>
+              <span class="tool-pill">Figma</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio-section" id="portfolio">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Showcasing My Recent Work</h2>
+          </div>
+          <div class="portfolio-highlight" role="note">
+            <div class="portfolio-highlight-content">
+              <span class="portfolio-highlight-label">Featured Focus</span>
+              <h3>
+                Building practical digital products with clean design and
+                dependable execution.
+              </h3>
+              <p>
+                From polished interfaces to full-stack builds, I focus on
+                creating experiences that feel effortless for users and easy to
+                maintain for clients.
+              </p>
+            </div>
+            <a href="#contact" class="btn-primary portfolio-highlight-cta">
+              <span>Discuss a Project</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div
+            class="portfolio-trust"
+            role="region"
+            aria-label="Client trust note"
+          >
+            <div class="portfolio-trust-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                I aim for clarity, reliability, and a polished experience at
+                every step — from first conversation to final delivery.
+              </p>
+            </div>
+            <div class="portfolio-trust-meta">
+              <span class="portfolio-trust-name">Mumtaj Ali</span>
+              <span class="portfolio-trust-role"
+                >Developer • Designer • Builder</span
+              >
+            </div>
+          </div>
+          <div class="portfolio-grid">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio1.png"
+                  alt="Web Development Project"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="85"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>Face Recognition System</h4>
+                    <p>
+                      Computer vision workflow with a clean matching interface
+                      designed for practical recognition and attendance-style
+                      use.
+                    </p>
+                    <div class="project-tags">
+                      <span>Python</span>
+                      <span>Computer Vision</span>
+                      <span>UI</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio2.png"
+                  alt="UI/UX Design Project"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="72"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>Snake Game</h4>
+                    <p>
+                      A compact console game with responsive controls, scoring,
+                      and collision logic built around a classic gameplay loop.
+                    </p>
+                    <div class="project-tags">
+                      <span>C++</span>
+                      <span>Game Logic</span>
+                      <span>Console App</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A/Snake-game-in-cpp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio3.png"
+                  alt="Full Stack Application"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="90"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>Full Stack Web Application</h4>
+                    <p>
+                      A practical end-to-end web app with user-facing pages,
+                      backend logic, and database-driven workflows.
+                    </p>
+                    <div class="project-tags">
+                      <span>PHP</span>
+                      <span>MySQL</span>
+                      <span>JavaScript</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio4.png"
+                  alt="E-Commerce Platform"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="78"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>E-Commerce Platform</h4>
+                    <p>
+                      An online store experience with product flows, customer
+                      interactions, and an admin dashboard for operations.
+                    </p>
+                    <div class="project-tags">
+                      <span>Laravel</span>
+                      <span>E-Commerce</span>
+                      <span>Admin Panel</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A/giftstore"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio5.png"
+                  alt="Business Website"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="82"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>Student Management Website</h4>
+                    <p>
+                      A structured academic management system for handling
+                      records, administration, and day-to-day student workflows.
+                    </p>
+                    <div class="project-tags">
+                      <span>PHP</span>
+                      <span>MySQL</span>
+                      <span>Admin Workflow</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="assets/portfolio6.png"
+                  alt="Dashboard Application"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="portfolio-progress">
+                  <div class="progress-label">Completion</div>
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                  >
+                    <div class="progress-fill" data-progress="68"></div>
+                  </div>
+                  <div class="progress-percent">0%</div>
+                </div>
+                <div class="portfolio-overlay">
+                  <div class="overlay-content">
+                    <h4>Note Sharing System</h4>
+                    <p>
+                      A note-sharing platform focused on easy uploads, organized
+                      access, and a practical admin workflow.
+                    </p>
+                    <div class="project-tags">
+                      <span>PHP</span>
+                      <span>MySQL</span>
+                      <span>File Sharing</span>
+                    </div>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/Mumtaj-A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        title="View on GitHub"
+                      >
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a
+                        href="#contact"
+                        aria-label="Discuss this project"
+                        title="Discuss Project"
+                      >
+                        <i class="fas fa-comments"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Let's Discuss Your Next Project</h2>
+            <p class="section-description">
+              I'm always open to discussing new opportunities, creative
+              projects, or just having a conversation about web development.
+            </p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info-card">
+              <div class="contact-header">
+                <div class="contact-header-icon">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h3 class="contact-info-title">Get In Touch</h3>
+                <p class="contact-info-text">
+                  Whether you need a polished website, a product build, or a
+                  practical UI upgrade, I’m happy to help turn your idea into
+                  something clear and usable.
+                </p>
+                <div class="availability-pill">
+                  <i class="fas fa-circle"></i>
+                  <span
+                    >Open for freelance, remote, and product
+                    collaborations</span
+                  >
+                </div>
+              </div>
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Location</h4>
+                    <p>Chandigarh, India</p>
+                    <span class="contact-subtitle"
+                      >Available for remote work</span
+                    >
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Email</h4>
+                    <p>
+                      <a href="mailto:alimumtaj132@gmail.com"
+                        >alimumtaj132@gmail.com</a
+                      >
+                    </p>
+                    <span class="contact-subtitle"
+                      >Send me an email anytime</span
+                    >
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+919151542665">+91 9151542665</a></p>
+                    <span class="contact-subtitle">Mon - Sat, 9AM - 6PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-social">
+                <span class="social-label">Connect with me</span>
+                <div class="social-links">
+                  <a
+                    href="https://linkedin.com/in/mumtaj-ali-03865328b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    class="social-link"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Mumtaj-A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    class="social-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://fb.com/ali.mumtaz.338658"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="social-link"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://wa.me/919151542665"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                    class="social-link"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-card">
+              <div class="form-header">
+                <h3 class="form-title">Send a Message</h3>
+                <p class="form-subtitle">
+                  Share a short note and I’ll take it from there — the form
+                  opens WhatsApp with your message ready to send.
+                </p>
+              </div>
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="name">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span>Full Name</span>
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">
+                    <i class="fas fa-comment-alt" aria-hidden="true"></i>
+                    <span>Message</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project or inquiry..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  id="submit-btn"
+                  type="submit"
+                  class="submit-btn whatsapp-btn"
+                >
+                  <span>Send on WhatsApp</span>
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo" aria-label="Mumtaj Ali — Home">
+              <span class="footer-logo-icon">M</span>
+              <span class="footer-logo-name">Mumtaj Ali</span>
+            </a>
+            <p class="footer-tagline">
+              Web developer &amp; UI designer building calm, high-performing
+              digital experiences for businesses, startups, and ambitious ideas.
+            </p>
+            <div class="footer-social" aria-label="Social media links">
+              <a
+                href="https://linkedin.com/in/mumtaj-ali-03865328b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/Mumtaj-A"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                title="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://facebook.com/ali.mumtaz.338658"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://wa.me/919151542665"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                title="WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <nav class="footer-column" aria-label="Footer navigation">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-column">
+            <h4 class="footer-heading">Services</h4>
+            <ul class="footer-links footer-links-muted">
+              <li>Web Development</li>
+              <li>UI/UX Design</li>
+              <li>Frontend Development</li>
+              <li>Backend Development</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:alimumtaj132@gmail.com"
+                  >alimumtaj132@gmail.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <a href="tel:+919151542665">+91 9151542665</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>Chandigarh, India</span>
+              </li>
+            </ul>
+            <a href="#contact" class="footer-cta">
+              <span>Start a Project</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p class="footer-note">
+              Open to freelance work, remote collaborations, and product builds.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; <span id="current-year"></span> <strong>Mumtaj Ali</strong>.
+            All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-actions" role="group" aria-label="Quick actions">
+      <a
+        class="chat-with-us"
+        href="https://wa.me/919151542665?text=Hi%20Mumtaj%2C%20I%27d%20like%20to%20discuss%20a%20project."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Talk with Mumtaj on WhatsApp"
+        title="Talk with me on WhatsApp"
+      >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="chat-action-label">Talk With Me</span>
+      </a>
+      <button
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top"
+        title="Back to top"
+      >
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        <span>Top</span>
+      </button>
+    </div>
+
+    <!-- Style Switcher -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas fa-moon"></i>
+      </div>
+      <div class="colors">
+        <span
+          style="background: #ec1839"
+          onclick="setTheme('theme-red')"
+          title="Red"
+        ></span>
+        <span
+          style="background: #fa5b0f"
+          onclick="setTheme('theme-orange')"
+          title="Orange"
+        ></span>
+        <span
+          style="background: #37b187"
+          onclick="setTheme('theme-green')"
+          title="Green"
+        ></span>
+        <span
+          style="background: #1854b4"
+          onclick="setTheme('theme-blue')"
+          title="Blue"
+        ></span>
+        <span
+          style="background: #f021b2"
+          onclick="setTheme('theme-pink')"
+          title="Pink"
+        ></span>
+        <span
+          style="background: #9333ea"
+          onclick="setTheme('theme-purple')"
+          title="Purple"
+        ></span>
+        <span
+          style="background: #06b6d4"
+          onclick="setTheme('theme-cyan')"
+          title="Cyan"
+        ></span>
+        <span
+          style="background: #14b8a6"
+          onclick="setTheme('theme-teal')"
+          title="Teal"
+        ></span>
+        <span
+          style="background: #f59e0b"
+          onclick="setTheme('theme-amber')"
+          title="Amber"
+        ></span>
+        <span
+          style="background: #ef4444"
+          onclick="setTheme('theme-rose')"
+          title="Rose"
+        ></span>
+        <span
+          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+          onclick="setTheme('theme-gradient-purple')"
+          title="Gradient Purple"
+        ></span>
+        <span
+          style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+          onclick="setTheme('theme-gradient-pink')"
+          title="Gradient Pink"
+        ></span>
+        <span
+          style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+          onclick="setTheme('theme-gradient-blue')"
+          title="Gradient Blue"
+        ></span>
+        <span
+          style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+          onclick="setTheme('theme-gradient-mint')"
+          title="Gradient Mint"
+        ></span>
+        <span
+          style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
+          onclick="setTheme('theme-gradient-warm')"
+          title="Gradient Warm"
+        ></span>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="PersonalPort.js"></script>
+    <script src="style-switcher.js"></script>
+  </body>
+</html>

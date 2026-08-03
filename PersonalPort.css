@@ -3896,9 +3896,9 @@ html:not(.js-enabled) .contact-form-card {
 
         transform: translateX(-50%);
 
-        width: 85%;
+        width: 80%;
         max-width: 450px;
-        height: 70px;
+        height: 65px;
 
         display: flex;
         justify-content: space-around;
@@ -3906,7 +3906,7 @@ html:not(.js-enabled) .contact-form-card {
 
         background: var(--bg-secondary);
 
-        border-radius: 40px;
+        border-radius: 35px;
 
         box-shadow:
             0 10px 35px rgba(0, 0, 0, .12);

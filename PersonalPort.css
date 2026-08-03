@@ -3892,7 +3892,7 @@ html:not(.js-enabled) .contact-form-card {
 
         position: fixed;
         left: 50%;
-        bottom: 1px;
+        bottom: 5px;
 
         transform: translateX(-50%);
 

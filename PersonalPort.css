@@ -3897,7 +3897,7 @@ html:not(.js-enabled) .contact-form-card {
         transform: translateX(-50%);
 
         width: 80%;
-        max-width: 450px;
+        max-width: 500px;
         height: 65px;
 
         display: flex;

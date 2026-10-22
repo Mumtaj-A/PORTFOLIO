@@ -2,18 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="Mumtaj Ali - Professional Web Designer & Developer. Specializing in modern web development, UI/UX design, and full-stack solutions. Based in Chandigarh, India."
+      content="Mumtaj Ali - Frontend & Full Stack Developer at NextOne Solutions. Specialized in Next.js, React.js, JavaScript, PHP, and Laravel. BCA Graduate from Chandigarh University (Top 2%)."
     />
     <meta
       name="keywords"
-      content="web designer, web developer, portfolio, Mumtaj Ali, Laravel developer, frontend developer, UI/UX designer"
+      content="Mumtaj Ali, Frontend Developer, NextOne Solutions, Next.js Developer, React.js Developer, Full Stack Developer, Laravel, Chandigarh University, UI Designer"
     />
     <meta name="author" content="Mumtaj Ali" />
-    <title>Mumtaj Ali | Web Developer & UI Designer</title>
-    <link rel="stylesheet" href="PersonalPort.css" />
+    <meta name="theme-color" content="#090a10" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mumtaj Ali | Frontend Developer at NextOne Solutions • Next.js & React" />
+    <meta
+      property="og:description"
+      content="Frontend Developer at NextOne Solutions. Building modern, high-performance web applications and intuitive digital experiences with Next.js, React.js, JavaScript, and Laravel."
+    />
+    <meta property="og:image" content="assets/frontphoto.png" />
+
+    <title>Mumtaj Ali | Frontend Developer • Next.js &amp; React.js</title>
+
+    <!-- FOUC Prevention for Color Scheme (Modern Web Guidance) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("themePreference");
+          var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -21,205 +53,149 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style-switcher.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="PersonalPort.css" />
   </head>
   <body>
-    <!-- Background Elements -->
-    <div class="bg-animation">
-      <canvas
-        id="three-portfolio-scene"
-        class="three-scene-canvas"
-        aria-hidden="true"
-      ></canvas>
-      <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
-      <div class="gradient-orb orb-3"></div>
+    <!-- Accessibility Skip Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Interactive Background Layer (Liquid Glass Orbs & Grid) -->
+    <div class="bg-layer" aria-hidden="true">
+      <div class="ambient-glow glow-1"></div>
+      <div class="ambient-glow glow-2"></div>
+      <div class="ambient-glow glow-3"></div>
+      <div class="ambient-glow glow-4"></div>
+      <div class="grid-overlay"></div>
     </div>
 
-    <!-- Navigation -->
-    <!-- =========================
-     Premium Floating Navbar
-========================== -->
-    <nav class="navbar" id="navbar">
-      <!-- Mouse Glow -->
-      <div class="nav-glow"></div>
-
+    <!-- Header & Navigation -->
+    <header class="navbar" id="navbar">
       <div class="nav-container">
-        <!-- ========= LOGO ========= -->
-        <a href="#home" class="navbar-brand">
-          <div class="brand-icon">
-            <span>MA</span>
-          </div>
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-          <div class="brand-content">
-            <h2>Mumtaj Ali</h2>
-            <span>Full Stack Developer</span>
-          </div>
-        </a>
-
-        <!-- ========= MENU ========= -->
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#home" class="nav-link active">
-              <span>Home</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#about" class="nav-link">
-              <span>About</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#services" class="nav-link">
-              <span>Services</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#portfolio" class="nav-link">
-              <span>Projects</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">
-              <span>Contact</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- ========= RIGHT SIDE ========= -->
+        <!-- Right Side Nav Actions (Theme Switcher Only) -->
         <div class="nav-actions">
-          <div class="availability">
-            <span class="status-dot"></span>
-            <span>Available</span>
-          </div>
-
-          <a
-            href="assets/cv.pdf"
-            download="Mumtaj_Ali_Resume.pdf"
-            class="resume-btn"
+          <!-- Modern Theme Switcher (Dark & Light Mode) -->
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            type="button"
+            aria-label="Toggle light and dark mode"
+            title="Toggle color theme"
           >
-            Resume
-
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </a>
+            <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
+            <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
+          </button>
         </div>
-
-        <!-- ========= MOBILE ========= -->
-        <button
-          class="nav-toggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
       </div>
-    </nav>
-    <nav class="mobile-nav">
-      <a href="#home" class="mobile-link active">
-        <div class="icon-box">
-          <i class="fas fa-home"></i>
-        </div>
-      </a>
+    </header>
 
-      <a href="#about" class="mobile-link">
-        <div class="icon-box">
-          <i class="fas fa-user"></i>
-        </div>
-      </a>
-
-      <a href="#services" class="mobile-link">
-        <div class="icon-box">
-          <i class="fas fa-briefcase"></i>
-        </div>
-      </a>
-
-      <a href="#portfolio" class="mobile-link">
-        <div class="icon-box">
-          <i class="fas fa-images"></i>
-        </div>
-      </a>
-
-      <a href="#contact" class="mobile-link">
-        <div class="icon-box">
-          <i class="fas fa-envelope"></i>
-        </div>
-      </a>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Hero Section -->
+    <!-- Main Content Area -->
+    <main id="main" class="main-content">
+      <!-- ==============================================
+           HERO SECTION
+      =============================================== -->
       <section class="hero-section" id="home">
-        <div class="hero-container">
-          <div class="hero-content">
+        <span id="hero" style="position: absolute; top: 0; left: 0; pointer-events: none;" aria-hidden="true"></span>
+        <div class="container hero-container">
+          <div class="hero-text-content">
+            <!-- Professional Badge -->
             <div class="hero-badge">
-              <i class="fas fa-code"></i>
-              <span>Interactive 3D Portfolio</span>
+              <span class="hero-badge-pulse"></span>
+              <span class="hero-badge-text">Available for Full-Time &amp; Freelance Roles</span>
             </div>
+
+            <!-- Main Heading -->
             <h1 class="hero-title">
-              <span class="greeting">Hello, I'm</span>
-              <span class="name-highlight">Mumtaj Ali</span>
-              <span class="profession"
-                >I'm a
-                <span class="typing-text typing">Web Designer</span></span
-              >
+              <span class="hero-greeting">Hi, I'm</span>
+              <span class="hero-name">Mumtaj Ali</span>
+              <span class="hero-typed-wrapper">
+                <span class="hero-typed-prefix">I develop</span>
+                <span class="typing" id="typed-target">Full Stack Web Apps</span>
+              </span>
             </h1>
-            <p class="hero-description">
-              Crafting modern, responsive, and scalable web applications that
-              deliver seamless user experiences.
+
+            <!-- Professional Summary -->
+            <p class="hero-bio">
+              Frontend Developer at <strong>NextOne Solutions</strong> &amp; Computer Science graduate specialized in crafting
+              high-performance web applications, responsive user interfaces, and modular component architectures using
+              <strong>Next.js</strong>, <strong>React.js</strong>, <strong>JavaScript (ES6+)</strong>,
+              and <strong>Laravel</strong>.
             </p>
-            <div class="hero-trust" aria-label="Availability and focus">
-              <span class="trust-pill">
-                <i class="fas fa-circle-check"></i>
-                <span>Available for freelance work</span>
-              </span>
-              <span class="trust-pill">
-                <i class="fas fa-bolt"></i>
-                <span>Focused on polished, high-conversion experiences</span>
-              </span>
+
+            <!-- Credibility Strip -->
+            <div class="hero-cred-strip" aria-label="Key Qualifications">
+              <div class="cred-item">
+                <i class="fas fa-briefcase cred-icon" aria-hidden="true"></i>
+                <div class="cred-text">
+                  <strong>NextOne Solutions</strong>
+                  <span>Frontend Developer (Next.js &amp; React)</span>
+                </div>
+              </div>
+              <div class="cred-item">
+                <i class="fas fa-graduation-cap cred-icon" aria-hidden="true"></i>
+                <div class="cred-text">
+                  <strong>BCA • Chandigarh University</strong>
+                  <span>Top 2% of Batch (8+ CGPA)</span>
+                </div>
+              </div>
+              <div class="cred-item">
+                <i class="fas fa-certificate cred-icon" aria-hidden="true"></i>
+                <div class="cred-text">
+                  <strong>Google UX Design Certified</strong>
+                  <span>User-Centered Engineering</span>
+                </div>
+              </div>
             </div>
-            <div class="hero-highlights" aria-label="Key strengths">
-              <div class="highlight-pill">
-                <i class="fas fa-layer-group"></i>
-                <span>Responsive Web Apps</span>
-              </div>
-              <div class="highlight-pill">
-                <i class="fas fa-rocket"></i>
-                <span>Fast, Clean Delivery</span>
-              </div>
-              <div class="highlight-pill">
-                <i class="fas fa-globe"></i>
-                <span>Remote Ready</span>
-              </div>
-            </div>
-            <div class="hero-actions">
-              <a href="#contact" class="btn-primary">
-                <span>Hire Me</span>
-                <i class="fas fa-arrow-right"></i>
+
+            <!-- Call to Actions -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Featured Work</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
               </a>
-              <a href="#portfolio" class="btn-secondary">
-                <span>View Work</span>
-                <i class="fas fa-briefcase"></i>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>Get In Touch</span>
               </a>
             </div>
-            <div class="hero-social">
+
+            <!-- Social Links -->
+            <div class="hero-social-links" aria-label="Social Profiles">
               <a
                 href="https://github.com/Mumtaj-A"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
+                class="social-icon-btn"
+                aria-label="GitHub Profile"
+                title="GitHub"
               >
                 <i class="fab fa-github"></i>
               </a>
@@ -227,658 +203,62 @@
                 href="https://linkedin.com/in/mumtaj-ali-03865328b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                class="social-icon-btn"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn"
               >
                 <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://fb.com/ali.mumtaz.338658"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
               </a>
               <a
                 href="https://wa.me/919151542665"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
+                class="social-icon-btn"
+                aria-label="WhatsApp Chat"
+                title="WhatsApp"
               >
                 <i class="fab fa-whatsapp"></i>
               </a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <div class="image-wrapper depth-card">
-              <div class="image-glow"></div>
-              <img
-                src="assets/frontphoto.png"
-                alt="Mumtaj Ali"
-                class="profile-image"
-              />
-              <div class="floating-badge badge-1">
-                <i class="fas fa-code"></i>
-                <span>Web Dev</span>
-              </div>
-              <div class="floating-badge badge-2">
-                <i class="fas fa-paint-brush"></i>
-                <span>UI/UX</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about-section" id="about">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-label">About Me</span>
-            <h2 class="section-title">Get to Know Me</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-content-card">
-              <div class="card-header">
-                <h3>
-                  I'm <span class="accent-text">Mumtaj Ali</span> and I'm a
-                  <span class="accent-text">Web Developer</span>
-                </h3>
-              </div>
-              <p class="about-text">
-                I'm a web developer focused on building practical, polished web
-                experiences from interface to database. I work with HTML, CSS,
-                JavaScript, Python, MySQL, PHP, and Laravel to create responsive
-                frontends, dependable backends, and simple workflows that feel
-                clear to the people using them.
-              </p>
-              <div class="info-grid">
-                <div class="info-card">
-                  <span class="info-label">Focus</span>
-                  <span class="info-value">Web Apps & Dashboards</span>
-                </div>
-                <div class="info-card">
-                  <span class="info-label">Core Stack</span>
-                  <span class="info-value">Laravel, PHP, MySQL, JS</span>
-                </div>
-                <div class="info-card">
-                  <span class="info-label">Working Style</span>
-                  <span class="info-value">Responsive, clean, reliable</span>
-                </div>
-                <div class="info-card">
-                  <span class="info-label">Location</span>
-                  <span class="info-value">Chandigarh, India</span>
-                </div>
-              </div>
-              <div class="achievements-strip" aria-label="Key achievements">
-                <div class="achievement-card">
-                  <span class="achievement-value">6+</span>
-                  <span class="achievement-label">Projects built</span>
-                </div>
-                <div class="achievement-card">
-                  <span class="achievement-value">100%</span>
-                  <span class="achievement-label">Responsive focus</span>
-                </div>
-                <div class="achievement-card">
-                  <span class="achievement-value">24h</span>
-                  <span class="achievement-label">Typical response</span>
-                </div>
-              </div>
-              <div class="action-buttons">
-                <a
-                  href="assets/cv.pdf"
-                  download="Mumtaj_Ali_Resume.pdf"
-                  class="btn-outline"
-                >
-                  <i class="fas fa-download"></i>
-                  <span>Download CV</span>
-                </a>
-                <a href="#contact" class="btn-primary">
-                  <i class="fas fa-envelope"></i>
-                  <span>Hire Me</span>
-                </a>
-              </div>
-            </div>
-            <div class="skills-card">
-              <h3 class="skills-title">Skills & Expertise</h3>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">HTML</span>
-                    <span class="skill-percent">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="90"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">CSS</span>
-                    <span class="skill-percent">80%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="80"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-percent">55%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="55"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">Python</span>
-                    <span class="skill-percent">76%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="76"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="services-section" id="services">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-label">Services</span>
-            <h2 class="section-title">What I Can Do For You</h2>
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-code"></i>
-                </div>
-              </div>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-description">
-                Business websites and web applications built with clean
-                structure, responsive layouts, and maintainable code.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-paint-brush"></i>
-                </div>
-              </div>
-              <h3 class="service-title">UI/UX Design</h3>
-              <p class="service-description">
-                User-friendly screens, flows, and layouts that make products
-                easier to understand and more comfortable to use.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-database"></i>
-                </div>
-              </div>
-              <h3 class="service-title">Database Management</h3>
-              <p class="service-description">
-                Organized database structures, queries, and data workflows with
-                attention to reliability, speed, and maintainability.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-laptop-code"></i>
-                </div>
-              </div>
-              <h3 class="service-title">Frontend Development</h3>
-              <p class="service-description">
-                Interactive interfaces with HTML, CSS, and JavaScript that work
-                smoothly across desktop, tablet, and mobile devices.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-server"></i>
-                </div>
-              </div>
-              <h3 class="service-title">Backend Development</h3>
-              <p class="service-description">
-                Server-side features, admin panels, and API-ready foundations
-                using PHP, Laravel, Python, and MySQL.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-icon-wrapper">
-                <div class="service-icon">
-                  <i class="fas fa-mobile-alt"></i>
-                </div>
-              </div>
-              <h3 class="service-title">Responsive Design</h3>
-              <p class="service-description">
-                Mobile-first layouts that keep content readable, navigation
-                simple, and interactions consistent on every screen size.
-              </p>
-              <div class="service-link">
-                <span>Learn More</span>
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="tools-strip" aria-label="Tools and technologies">
-            <div class="tools-strip-title">Tools I work with</div>
-            <div class="tools-pills">
-              <span class="tool-pill">HTML</span>
-              <span class="tool-pill">CSS</span>
-              <span class="tool-pill">JavaScript</span>
-              <span class="tool-pill">PHP</span>
-              <span class="tool-pill">Laravel</span>
-              <span class="tool-pill">MySQL</span>
-              <span class="tool-pill">Python</span>
-              <span class="tool-pill">Figma</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section class="portfolio-section" id="portfolio">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-label">Portfolio</span>
-            <h2 class="section-title">Showcasing My Recent Work</h2>
-          </div>
-          <div class="portfolio-highlight" role="note">
-            <div class="portfolio-highlight-content">
-              <span class="portfolio-highlight-label">Featured Focus</span>
-              <h3>
-                Building practical digital products with clean design and
-                dependable execution.
-              </h3>
-              <p>
-                From polished interfaces to full-stack builds, I focus on
-                creating experiences that feel effortless for users and easy to
-                maintain for clients.
-              </p>
-            </div>
-            <a href="#contact" class="btn-primary portfolio-highlight-cta">
-              <span>Discuss a Project</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div
-            class="portfolio-trust"
-            role="region"
-            aria-label="Client trust note"
-          >
-            <div class="portfolio-trust-quote">
-              <i class="fas fa-quote-left"></i>
-              <p>
-                I aim for clarity, reliability, and a polished experience at
-                every step — from first conversation to final delivery.
-              </p>
-            </div>
-            <div class="portfolio-trust-meta">
-              <span class="portfolio-trust-name">Mumtaj Ali</span>
-              <span class="portfolio-trust-role"
-                >Developer • Designer • Builder</span
+              <a
+                href="mailto:alimumtaj132@gmail.com"
+                class="social-icon-btn"
+                aria-label="Email Me"
+                title="alimumtaj132@gmail.com"
               >
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
           </div>
-          <div class="portfolio-grid">
-            <div class="portfolio-card">
-              <div class="portfolio-image">
+
+          <!-- Hero Image & Interactive Card -->
+          <div class="hero-visual-content">
+            <div class="profile-card depth-card" id="profile-card">
+              <div class="profile-frame">
                 <img
-                  src="assets/portfolio1.png"
-                  alt="Web Development Project"
-                  loading="lazy"
-                  decoding="async"
+                  src="assets/frontphoto.png"
+                  alt="Mumtaj Ali - Full Stack Developer"
+                  class="profile-img"
+                  width="480"
+                  height="480"
+                  loading="eager"
+                  fetchpriority="high"
                 />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="85"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>Face Recognition System</h4>
-                    <p>
-                      Computer vision workflow with a clean matching interface
-                      designed for practical recognition and attendance-style
-                      use.
-                    </p>
-                    <div class="project-tags">
-                      <span>Python</span>
-                      <span>Computer Vision</span>
-                      <span>UI</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
+                <div class="profile-glare"></div>
+              </div>
+
+              <!-- Floating Micro Status Pills -->
+              <div class="floating-tag tag-top">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+                <div>
+                  <strong>Full Stack Dev</strong>
+                  <span>Laravel • PHP • JS</span>
                 </div>
               </div>
-            </div>
-            <div class="portfolio-card">
-              <div class="portfolio-image">
-                <img
-                  src="assets/portfolio2.png"
-                  alt="UI/UX Design Project"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="72"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>Snake Game</h4>
-                    <p>
-                      A compact console game with responsive controls, scoring,
-                      and collision logic built around a classic gameplay loop.
-                    </p>
-                    <div class="project-tags">
-                      <span>C++</span>
-                      <span>Game Logic</span>
-                      <span>Console App</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A/Snake-game-in-cpp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-card">
-              <div class="portfolio-image">
-                <img
-                  src="assets/portfolio3.png"
-                  alt="Full Stack Application"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="90"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>Full Stack Web Application</h4>
-                    <p>
-                      A practical end-to-end web app with user-facing pages,
-                      backend logic, and database-driven workflows.
-                    </p>
-                    <div class="project-tags">
-                      <span>PHP</span>
-                      <span>MySQL</span>
-                      <span>JavaScript</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-card">
-              <div class="portfolio-image">
-                <img
-                  src="assets/portfolio4.png"
-                  alt="E-Commerce Platform"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="78"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>E-Commerce Platform</h4>
-                    <p>
-                      An online store experience with product flows, customer
-                      interactions, and an admin dashboard for operations.
-                    </p>
-                    <div class="project-tags">
-                      <span>Laravel</span>
-                      <span>E-Commerce</span>
-                      <span>Admin Panel</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A/giftstore"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-card">
-              <div class="portfolio-image">
-                <img
-                  src="assets/portfolio5.png"
-                  alt="Business Website"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="82"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>Student Management Website</h4>
-                    <p>
-                      A structured academic management system for handling
-                      records, administration, and day-to-day student workflows.
-                    </p>
-                    <div class="project-tags">
-                      <span>PHP</span>
-                      <span>MySQL</span>
-                      <span>Admin Workflow</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-card">
-              <div class="portfolio-image">
-                <img
-                  src="assets/portfolio6.png"
-                  alt="Dashboard Application"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div class="portfolio-progress">
-                  <div class="progress-label">Completion</div>
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                  >
-                    <div class="progress-fill" data-progress="68"></div>
-                  </div>
-                  <div class="progress-percent">0%</div>
-                </div>
-                <div class="portfolio-overlay">
-                  <div class="overlay-content">
-                    <h4>Note Sharing System</h4>
-                    <p>
-                      A note-sharing platform focused on easy uploads, organized
-                      access, and a practical admin workflow.
-                    </p>
-                    <div class="project-tags">
-                      <span>PHP</span>
-                      <span>MySQL</span>
-                      <span>File Sharing</span>
-                    </div>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/Mumtaj-A"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        title="View on GitHub"
-                      >
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a
-                        href="#contact"
-                        aria-label="Discuss this project"
-                        title="Discuss Project"
-                      >
-                        <i class="fas fa-comments"></i>
-                      </a>
-                    </div>
-                  </div>
+              <div class="floating-tag tag-bottom">
+                <i class="fas fa-award" aria-hidden="true"></i>
+                <div>
+                  <strong>Google Certified UX</strong>
+                  <span>Modern, accessible UI</span>
                 </div>
               </div>
             </div>
@@ -886,163 +266,1107 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact-section" id="contact">
+      <!-- ==============================================
+           ABOUT SECTION
+      =============================================== -->
+      <section class="section about-section" id="about">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">Contact</span>
-            <h2 class="section-title">Let's Discuss Your Next Project</h2>
-            <p class="section-description">
-              I'm always open to discussing new opportunities, creative
-              projects, or just having a conversation about web development.
+          <div class="section-heading">
+            <span class="section-kicker">About Me</span>
+            <h2 class="section-title">Engineering Reliable Web Experiences from Front to Back</h2>
+            <p class="section-subtitle">
+              Focused on writing clean, maintainable code, structuring efficient databases, and
+              delivering intuitive interfaces that solve real user and business needs.
             </p>
           </div>
-          <div class="contact-grid">
-            <div class="contact-info-card">
-              <div class="contact-header">
-                <div class="contact-header-icon">
-                  <i class="fas fa-envelope-open-text"></i>
+
+          <div class="about-grid">
+            <!-- Left: Biography & Mindset -->
+            <div class="about-bio-card card-surface">
+              <h3 class="card-title">
+                Building with <span class="text-accent">Clarity, Precision</span> &amp; Purpose
+              </h3>
+              <p class="bio-paragraph">
+                I am a <strong>Frontend Developer at NextOne Solutions</strong> with a strong foundation across both
+                modern client-side engineering and robust backend architectures. Having graduated with a Bachelor of Computer Applications from
+                <strong>Chandigarh University</strong> (ranking in the top 2% of my batch), I combine
+                rigorous computer science fundamentals with hands-on expertise building fast, scalable web apps in <strong>Next.js</strong> and <strong>React.js</strong>.
+              </p>
+              <p class="bio-paragraph">
+                My work spans component-driven applications, SSR and App Router architecture, responsive liquid glass interfaces,
+                RESTful APIs, and full-stack systems with Laravel and MySQL. I believe software should be as
+                clean under the hood as it looks on screen — fast, accessible, secure, and intuitive on every device.
+              </p>
+
+              <!-- Quantitative Highlights Grid -->
+              <div class="stats-row" aria-label="Key Metrics">
+                <div class="stat-box">
+                  <span class="stat-number">6+</span>
+                  <span class="stat-label">Full Stack &amp; Web Projects</span>
                 </div>
-                <h3 class="contact-info-title">Get In Touch</h3>
-                <p class="contact-info-text">
-                  Whether you need a polished website, a product build, or a
-                  practical UI upgrade, I’m happy to help turn your idea into
-                  something clear and usable.
+                <div class="stat-box">
+                  <span class="stat-number">Top 2%</span>
+                  <span class="stat-label">Batch Rank (8+ CGPA)</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Responsive &amp; Mobile-First</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-number">&lt; 24h</span>
+                  <span class="stat-label">Response Time</span>
+                </div>
+              </div>
+
+              <!-- Action Link -->
+              <div class="about-actions">
+                <a href="#contact" class="btn btn-primary">
+                  <span>Start a Conversation</span>
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Core Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-card card-surface">
+                <div class="pillar-icon">
+                  <i class="fas fa-cubes-stacked" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-content">
+                  <h4>Full-Stack Architecture</h4>
+                  <p>
+                    Designing modular MVC systems with Laravel, Core PHP, and MySQL. Secure authentication,
+                    role-based access control (RBAC), and robust data modeling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pillar-card card-surface">
+                <div class="pillar-icon">
+                  <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-content">
+                  <h4>Next.js, React &amp; Responsive UI</h4>
+                  <p>
+                    Building lightning-fast, reactive user interfaces with Next.js, React.js, and modern CSS/TypeScript.
+                    Flawlessly responsive across smartphones, foldables, tablets, and high-res desktops.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pillar-card card-surface">
+                <div class="pillar-icon">
+                  <i class="fas fa-compass-drafting" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-content">
+                  <h4>User-Centered Design (UX)</h4>
+                  <p>
+                    Certified in Google UX Design foundations. Focused on intuitive navigation paths,
+                    visual hierarchy, cognitive ease, and web accessibility standards (WCAG).
+                  </p>
+                </div>
+              </div>
+
+              <div class="pillar-card card-surface">
+                <div class="pillar-icon">
+                  <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
+                </div>
+                <div class="pillar-content">
+                  <h4>DevOps &amp; Cloud Workflows</h4>
+                  <p>
+                    Familiar with Git/GitHub version control, AWS S3 &amp; EC2 deployment, Netlify,
+                    Railway, and local environment staging with XAMPP &amp; Linux CLI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           EXPERIENCE & EDUCATION SECTION
+      =============================================== -->
+      <section class="section experience-section" id="experience">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Background &amp; Credentials</span>
+            <h2 class="section-title">Experience, Education &amp; Certifications</h2>
+            <p class="section-subtitle">
+              A transparent look at my formal education, engineering internship, and verified professional credentials.
+            </p>
+          </div>
+
+          <div class="timeline-grid">
+            <!-- Work Experience -->
+            <div class="timeline-column">
+              <div class="column-header">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <h3>Work Experience</h3>
+              </div>
+
+              <!-- NextOne Solutions (Current Role) -->
+              <div class="timeline-card card-surface featured-timeline-card">
+                <div class="timeline-badge timeline-badge-current">Present</div>
+                <div class="timeline-meta">
+                  <h4 class="timeline-role">Frontend Developer</h4>
+                  <span class="timeline-company">NextOne Solutions</span>
+                  <span class="timeline-status-badge"><span class="status-dot"></span> Current Position</span>
+                </div>
+                <p class="timeline-desc">
+                  Developing high-performance, responsive web applications and interactive client interfaces using
+                  <strong>Next.js</strong>, <strong>React.js</strong>, and modern front-end tooling.
                 </p>
-                <div class="availability-pill">
-                  <i class="fas fa-circle"></i>
-                  <span
-                    >Open for freelance, remote, and product
-                    collaborations</span
+                <ul class="timeline-bullets">
+                  <li>
+                    Architecting scalable, modular component libraries and dynamic client views using <strong>React.js</strong> and <strong>Next.js (App Router / SSR)</strong>.
+                  </li>
+                  <li>
+                    Translating complex designs and wireframes into pixel-perfect, accessible, and responsive liquid glass interfaces with smooth touch interactions.
+                  </li>
+                  <li>
+                    Integrating RESTful APIs, optimizing Core Web Vitals, and implementing state management for seamless end-user workflows.
+                  </li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag-pill">Next.js</span>
+                  <span class="tag-pill">React.js</span>
+                  <span class="tag-pill">JavaScript ES6+</span>
+                  <span class="tag-pill">TypeScript</span>
+                  <span class="tag-pill">Tailwind CSS</span>
+                  <span class="tag-pill">REST APIs</span>
+                </div>
+              </div>
+
+              <!-- Simar Technology Internship -->
+              <div class="timeline-card card-surface">
+                <div class="timeline-badge">2025</div>
+                <div class="timeline-meta">
+                  <h4 class="timeline-role">Web Developer Intern</h4>
+                  <span class="timeline-company">Simar Technology</span>
+                  <span class="timeline-location">Hoshiarpur, Punjab, India</span>
+                </div>
+                <p class="timeline-desc">
+                  Engineered an automated <strong>Student Management System</strong> designed to streamline
+                  administrative, academic, and attendance workflows for educational institutes.
+                </p>
+                <ul class="timeline-bullets">
+                  <li>
+                    Built backend modules using <strong>Core PHP &amp; MySQL</strong> for student
+                    registration, daily attendance monitoring, and automated exam report generation.
+                  </li>
+                  <li>
+                    Implemented comprehensive <strong>Role-Based Access Control (RBAC)</strong> separating
+                    Administrator, Faculty, and Student permissions securely.
+                  </li>
+                  <li>
+                    Engineered an intuitive, responsive administrative dashboard with HTML5, CSS3,
+                    Bootstrap, and JavaScript, reducing administrative reporting overhead.
+                  </li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag-pill">PHP</span>
+                  <span class="tag-pill">MySQL</span>
+                  <span class="tag-pill">Bootstrap</span>
+                  <span class="tag-pill">JavaScript</span>
+                  <span class="tag-pill">RBAC</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education & Honors -->
+            <div class="timeline-column">
+              <div class="column-header">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <h3>Education &amp; Honors</h3>
+              </div>
+
+              <div class="timeline-card card-surface">
+                <div class="timeline-badge">2023 — 2026</div>
+                <div class="timeline-meta">
+                  <h4 class="timeline-role">Bachelor of Computer Applications (BCA)</h4>
+                  <span class="timeline-company">Chandigarh University</span>
+                  <span class="timeline-location">Punjab, India</span>
+                </div>
+                <p class="timeline-desc">
+                  Rigorous computer science curriculum emphasizing software engineering, algorithms, database
+                  management systems, and full-stack web applications.
+                </p>
+                <ul class="timeline-bullets">
+                  <li>
+                    <strong>Ranked among Top 2%</strong> of the entire 2023 batch with an outstanding
+                    <strong>8+ CGPA</strong>.
+                  </li>
+                  <li>
+                    Developed 3+ full-stack software applications including Laravel MVC web platforms,
+                    PHP administrative engines, and Python machine learning projects.
+                  </li>
+                  <li>
+                    Core coursework: Data Structures, OOP (C++, Python), Database Management Systems (MySQL),
+                    Web Architecture, Operating Systems.
+                  </li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag-pill">BCA</span>
+                  <span class="tag-pill">Top 2%</span>
+                  <span class="tag-pill">8+ CGPA</span>
+                  <span class="tag-pill">Chandigarh University</span>
+                </div>
+              </div>
+
+              <!-- Certifications Card -->
+              <div class="certification-card card-surface">
+                <div class="column-header-sub">
+                  <i class="fas fa-certificate" aria-hidden="true"></i>
+                  <h4>Verified Certifications</h4>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-icon-wrap">
+                    <i class="fab fa-google" aria-hidden="true"></i>
+                  </div>
+                  <div class="cert-details">
+                    <span class="cert-title">Foundations of User Experience (UX) Design</span>
+                    <span class="cert-issuer">Google • Coursera Verified</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <div class="cert-icon-wrap">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                  </div>
+                  <div class="cert-details">
+                    <span class="cert-title">Software Engineering Internship Certificate</span>
+                    <span class="cert-issuer">Simar Technology Company</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           PROJECTS / PORTFOLIO SECTION
+      =============================================== -->
+      <section class="section projects-section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Portfolio &amp; Case Studies</span>
+            <h2 class="section-title">Featured Projects &amp; Software Builds</h2>
+            <p class="section-subtitle">
+              Explore recent projects demonstrating full-stack architecture, clean database design,
+              and thoughtful user interfaces.
+            </p>
+          </div>
+
+          <!-- Project Filter Controls -->
+          <div class="project-filters" role="tablist" aria-label="Filter Projects">
+            <button
+              class="filter-btn active"
+              type="button"
+              data-filter="all"
+              role="tab"
+              aria-selected="true"
+            >
+              All Projects
+            </button>
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="fullstack"
+              role="tab"
+              aria-selected="false"
+            >
+              Full-Stack &amp; Laravel
+            </button>
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="php"
+              role="tab"
+              aria-selected="false"
+            >
+              PHP &amp; MySQL
+            </button>
+            <button
+              class="filter-btn"
+              type="button"
+              data-filter="systems"
+              role="tab"
+              aria-selected="false"
+            >
+              Python &amp; Systems
+            </button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid" id="projects-grid">
+            <!-- Project 1: GiftStore E-Commerce -->
+            <article class="project-card card-surface" data-category="fullstack">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio4.png"
+                  alt="GiftStore E-Commerce Platform"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Full Stack • E-Commerce</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">GiftStore E-Commerce Platform</h3>
+                <p class="project-description">
+                  A complete online store built on Laravel with product catalogs, interactive cart,
+                  checkout flows, and a dedicated admin panel for inventory, category, and order management.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Admin Panel</span>
+                  <span class="tech-tag">E-Commerce</span>
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A/giftstore"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View GiftStore Source Code on GitHub"
                   >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Code</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="giftstore"
+                    aria-label="View Details about GiftStore"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
                 </div>
               </div>
-              <div class="contact-items">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h4>Location</h4>
-                    <p>Chandigarh, India</p>
-                    <span class="contact-subtitle"
-                      >Available for remote work</span
-                    >
-                  </div>
+            </article>
+
+            <!-- Project 2: Student Management System -->
+            <article class="project-card card-surface" data-category="php">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio5.png"
+                  alt="Student Management System"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Internship Project</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Student Management System</h3>
+                <p class="project-description">
+                  Institutional software engineered during the Simar Technology internship featuring
+                  multi-tier role-based access, student registration, attendance tracking, and automated reporting.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Core PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Bootstrap 5</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">RBAC</span>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h4>Email</h4>
-                    <p>
-                      <a href="mailto:alimumtaj132@gmail.com"
-                        >alimumtaj132@gmail.com</a
-                      >
-                    </p>
-                    <span class="contact-subtitle"
-                      >Send me an email anytime</span
-                    >
-                  </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View Student Management Code on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="sms"
+                    aria-label="View Details about Student Management System"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
+              </div>
+            </article>
+
+            <!-- Project 3: Dynamic Blog & CMS Platform -->
+            <article class="project-card card-surface" data-category="fullstack">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio3.png"
+                  alt="Dynamic Blog Platform"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Laravel MVC</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Dynamic Blog &amp; Content Platform</h3>
+                <p class="project-description">
+                  A scalable publishing system with user authentication, role management (Admin, Editor, User),
+                  SEO-friendly slugs, post categorization, tag taxonomies, and rich comment streams.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">SEO Slugs</span>
+                  <span class="tech-tag">RESTful MVC</span>
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View Blog Platform on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="blog"
+                    aria-label="View Details about Blog Platform"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Face Recognition Attendance System -->
+            <article class="project-card card-surface" data-category="systems">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio1.png"
+                  alt="Face Recognition Attendance System"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Computer Vision • AI</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Face Recognition Attendance System</h3>
+                <p class="project-description">
+                  A Python application utilizing OpenCV and computer vision models to identify facial features,
+                  verify user identities, and automatically register timestamps into an attendance database.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">Computer Vision</span>
+                  <span class="tech-tag">Attendance AI</span>
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View Face Recognition Project on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="facerecog"
+                    aria-label="View Details about Face Recognition"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5: Academic Note Sharing Platform -->
+            <article class="project-card card-surface" data-category="php">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio6.png"
+                  alt="Academic Note Sharing Platform"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Web Application</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Note Sharing &amp; Academic Portal</h3>
+                <p class="project-description">
+                  A centralized collaboration hub where students and educators can securely upload, organize,
+                  search, and download subject notes, previous question papers, and study materials.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">File Uploads</span>
+                  <span class="tech-tag">Search &amp; Filter</span>
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View Note Sharing Platform on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Repo</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="noteshare"
+                    aria-label="View Details about Note Sharing Portal"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6: Snake Game Engine in C++ -->
+            <article class="project-card card-surface" data-category="systems">
+              <div class="project-image-box">
+                <img
+                  src="assets/portfolio2.png"
+                  alt="Snake Game in C++"
+                  loading="lazy"
+                  decoding="async"
+                  class="project-img"
+                  width="600"
+                  height="340"
+                />
+                <div class="project-badge">Algorithmic C++</div>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Classic Snake Game Engine</h3>
+                <p class="project-description">
+                  A modular console game built in modern C++ showcasing core data structures, coordinate grid
+                  collision detection, real-time input polling, and dynamic score tracking.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">Game Logic</span>
+                  <span class="tech-tag">Data Structures</span>
+                  <span class="tech-tag">Algorithms</span>
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/Mumtaj-A/Snake-game-in-cpp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline"
+                    aria-label="View Snake Game Code on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub Code</span>
+                  </a>
+                  <button
+                    class="btn btn-sm btn-ghost view-details-btn"
+                    type="button"
+                    data-project="snake"
+                    aria-label="View Details about Snake Game"
+                  >
+                    <span>Details</span>
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SKILLS SECTION
+      =============================================== -->
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Technical Stack</span>
+            <h2 class="section-title">Languages, Frameworks &amp; Developer Tools</h2>
+            <p class="section-subtitle">
+              A structured categorization of the technologies I use to build scalable backends,
+              responsive frontends, and reliable software.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Skill Category 1: Backend Engineering -->
+            <div class="skill-category-card card-surface">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fas fa-server" aria-hidden="true"></i>
+                </div>
+                <h3>Backend Engineering</h3>
+              </div>
+              <p class="category-summary">
+                Building reliable server-side architecture, RESTful endpoints, and business logic.
+              </p>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-php"></i> PHP (8+)</span>
+                <span class="skill-chip"><i class="fab fa-laravel"></i> Laravel (MVC)</span>
+                <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-chip"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+                <span class="skill-chip"><i class="fas fa-shield-halved"></i> Role-Based Auth</span>
+                <span class="skill-chip"><i class="fas fa-code"></i> C++</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 2: Frontend & UI -->
+            <div class="skill-category-card card-surface">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                </div>
+                <h3>Frontend &amp; Interface Design</h3>
+              </div>
+              <p class="category-summary">
+                Crafting clean, responsive, and accessible user interfaces that engage visitors.
+              </p>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-react"></i> React.js</span>
+                <span class="skill-chip"><i class="fas fa-layer-group"></i> Next.js (App Router)</span>
+                <span class="skill-chip"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+                <span class="skill-chip"><i class="fas fa-code"></i> TypeScript</span>
+                <span class="skill-chip"><i class="fab fa-css3-alt"></i> Tailwind CSS &amp; Modern UI</span>
+                <span class="skill-chip"><i class="fab fa-html5"></i> HTML5 (Semantic)</span>
+                <span class="skill-chip"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+                <span class="skill-chip"><i class="fas fa-mobile-screen"></i> Responsive &amp; Touch UI</span>
+                <span class="skill-chip"><i class="fab fa-figma"></i> Figma &amp; UI Prototyping</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 3: Databases & Storage -->
+            <div class="skill-category-card card-surface">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fas fa-database" aria-hidden="true"></i>
+                </div>
+                <h3>Databases &amp; Data Modeling</h3>
+              </div>
+              <p class="category-summary">
+                Designing normalized schemas, writing clean queries, and ensuring data integrity.
+              </p>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fas fa-database"></i> MySQL</span>
+                <span class="skill-chip"><i class="fas fa-table"></i> Relational Schema Design</span>
+                <span class="skill-chip"><i class="fas fa-bolt"></i> Query Optimization</span>
+                <span class="skill-chip"><i class="fas fa-cloud"></i> AWS S3 Storage</span>
+                <span class="skill-chip"><i class="fas fa-server"></i> XAMPP / phpMyAdmin</span>
+              </div>
+            </div>
+
+            <!-- Skill Category 4: Cloud & DevOps Tools -->
+            <div class="skill-category-card card-surface">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fas fa-terminal" aria-hidden="true"></i>
+                </div>
+                <h3>Cloud, Tooling &amp; Workflow</h3>
+              </div>
+              <p class="category-summary">
+                Version control, deployment pipelines, cloud environments, and terminal proficiency.
+              </p>
+              <div class="skill-chips">
+                <span class="skill-chip"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+                <span class="skill-chip"><i class="fab fa-aws"></i> AWS (EC2, S3)</span>
+                <span class="skill-chip"><i class="fas fa-cloud-arrow-up"></i> Netlify &amp; Railway</span>
+                <span class="skill-chip"><i class="fab fa-linux"></i> Linux CLI</span>
+                <span class="skill-chip"><i class="fas fa-code"></i> VS Code</span>
+                <span class="skill-chip"><i class="fab fa-wordpress"></i> WordPress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SERVICES & PROCESS SECTION
+      =============================================== -->
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">What I Offer</span>
+            <h2 class="section-title">Professional Services &amp; Capabilities</h2>
+            <p class="section-subtitle">
+              Delivering high-value, end-to-end digital solutions tailored to businesses, startups, and product teams.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card card-surface">
+              <div class="service-icon-wrap">
+                <i class="fas fa-laptop-code" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Full-Stack Web Development</h3>
+              <p class="service-desc">
+                Building robust, turnkey web applications using Laravel and PHP with secure authentication,
+                intuitive business workflows, and maintainable MVC architecture.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Custom Admin Dashboards</li>
+                <li><i class="fas fa-check"></i> Secure Auth &amp; Role Management</li>
+                <li><i class="fas fa-check"></i> Clean, Documented Codebase</li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card card-surface">
+              <div class="service-icon-wrap">
+                <i class="fas fa-pen-nib" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">UI/UX Design &amp; Frontend</h3>
+              <p class="service-desc">
+                Transforming ideas and wireframes into polished, pixel-perfect web interfaces. Google UX
+                certified with a deep focus on mobile ergonomics, accessibility, and speed.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Mobile-First Responsive Layouts</li>
+                <li><i class="fas fa-check"></i> Accessible, High-Contrast UI</li>
+                <li><i class="fas fa-check"></i> Micro-interactions &amp; Polish</li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card card-surface">
+              <div class="service-icon-wrap">
+                <i class="fas fa-database" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Database Design &amp; APIs</h3>
+              <p class="service-desc">
+                Structuring clean MySQL databases, writing optimized queries, and connecting backends with
+                third-party APIs, payment gateways, and storage solutions like AWS S3.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Normalized Relational Schemas</li>
+                <li><i class="fas fa-check"></i> Fast Query Execution</li>
+                <li><i class="fas fa-check"></i> REST API Integrations</li>
+              </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card card-surface">
+              <div class="service-icon-wrap">
+                <i class="fas fa-gauge-high" aria-hidden="true"></i>
+              </div>
+              <h3 class="service-title">Performance &amp; Cloud Deployment</h3>
+              <p class="service-desc">
+                Deploying and optimizing web projects across modern cloud platforms (AWS, Netlify, Railway).
+                Auditing load times, Core Web Vitals, and responsive cross-browser compatibility.
+              </p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Production Hosting &amp; SSL</li>
+                <li><i class="fas fa-check"></i> Asset &amp; Script Optimization</li>
+                <li><i class="fas fa-check"></i> Ongoing Maintenance &amp; Fixes</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4-Step Process Strip -->
+          <div class="process-strip card-surface">
+            <div class="process-heading">
+              <span class="process-kicker">My Working Process</span>
+              <h3>How We Turn Ideas Into Working Software</h3>
+            </div>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-num">01</div>
+                <h4>Discovery</h4>
+                <p>Understanding goals, core requirements, user needs, and defining scope.</p>
+              </div>
+              <div class="process-step">
+                <div class="step-num">02</div>
+                <h4>Architecture</h4>
+                <p>Planning database schemas, wireframing screens, and agreeing on milestones.</p>
+              </div>
+              <div class="process-step">
+                <div class="step-num">03</div>
+                <h4>Development</h4>
+                <p>Writing clean, tested code with continuous integration and updates.</p>
+              </div>
+              <div class="process-step">
+                <div class="step-num">04</div>
+                <h4>Deployment</h4>
+                <p>Deploying to production, final QA checks, handover, and post-launch support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           CONTACT SECTION
+      =============================================== -->
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Get In Touch</span>
+            <h2 class="section-title">Let's Discuss Your Next Project</h2>
+            <p class="section-subtitle">
+              Whether you need a dedicated full-stack developer, want to hire me for a freelance build,
+              or just want to say hello, feel free to drop a message.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left: Direct Contact Information -->
+            <div class="contact-info-card card-surface">
+              <div class="contact-card-header">
+                <h3>Contact Information</h3>
+                <p>
+                  Reach out directly via email, phone, or WhatsApp. I usually respond within 24 hours.
+                </p>
+              </div>
+
+              <div class="contact-methods">
+                <!-- Email -->
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                   </div>
-                  <div class="contact-details">
-                    <h4>Phone</h4>
-                    <p><a href="tel:+919151542665">+91 9151542665</a></p>
-                    <span class="contact-subtitle">Mon - Sat, 9AM - 6PM</span>
+                  <div class="method-content">
+                    <span class="method-label">Email</span>
+                    <a href="mailto:alimumtaj132@gmail.com" class="method-value">
+                      alimumtaj132@gmail.com
+                    </a>
+                  </div>
+                  <button
+                    class="copy-btn"
+                    type="button"
+                    data-copy="alimumtaj132@gmail.com"
+                    aria-label="Copy email address"
+                    title="Copy email"
+                  >
+                    <i class="fas fa-copy" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- Phone / WhatsApp -->
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-content">
+                    <span class="method-label">Phone &amp; WhatsApp</span>
+                    <a href="tel:+919151542665" class="method-value">+91 9151542665</a>
+                    <span class="method-sub">+977 9805454344</span>
+                  </div>
+                  <button
+                    class="copy-btn"
+                    type="button"
+                    data-copy="+919151542665"
+                    aria-label="Copy phone number"
+                    title="Copy phone"
+                  >
+                    <i class="fas fa-copy" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-content">
+                    <span class="method-label">Location</span>
+                    <span class="method-value">Chandigarh, Punjab, India</span>
+                    <span class="method-sub">Available for Global Remote Work</span>
                   </div>
                 </div>
               </div>
-              <div class="contact-social">
-                <span class="social-label">Connect with me</span>
-                <div class="social-links">
+
+              <!-- Quick Connect Action -->
+              <div class="whatsapp-card">
+                <div class="whatsapp-content">
+                  <i class="fab fa-whatsapp whatsapp-big-icon" aria-hidden="true"></i>
+                  <div>
+                    <strong>Chat Directly on WhatsApp</strong>
+                    <span>Instant mobile response for urgent inquiries</span>
+                  </div>
+                </div>
+                <a
+                  href="https://wa.me/919151542665?text=Hello%20Mumtaj,%20I'd%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp"
+                >
+                  <span>Open WhatsApp</span>
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-social-section">
+                <span class="social-section-label">Connect on professional networks:</span>
+                <div class="social-pills">
                   <a
                     href="https://linkedin.com/in/mumtaj-ali-03865328b/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="social-pill"
                     aria-label="LinkedIn"
-                    class="social-link"
                   >
                     <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
                   </a>
                   <a
                     href="https://github.com/Mumtaj-A"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="social-pill"
                     aria-label="GitHub"
-                    class="social-link"
                   >
                     <i class="fab fa-github"></i>
+                    <span>GitHub</span>
                   </a>
                   <a
                     href="https://fb.com/ali.mumtaz.338658"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="social-pill"
                     aria-label="Facebook"
-                    class="social-link"
                   >
                     <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a
-                    href="https://wa.me/919151542665"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                    class="social-link"
-                  >
-                    <i class="fab fa-whatsapp"></i>
+                    <span>Facebook</span>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="contact-form-card">
+
+            <!-- Right: Interactive Validated Contact Form -->
+            <div class="contact-form-card card-surface">
               <div class="form-header">
-                <h3 class="form-title">Send a Message</h3>
-                <p class="form-subtitle">
-                  Share a short note and I’ll take it from there — the form
-                  opens WhatsApp with your message ready to send.
-                </p>
+                <h3>Send a Message</h3>
+                <p>Fill out this form to connect via WhatsApp or launch an email draft.</p>
               </div>
-              <form id="contact-form" novalidate>
-                <div class="form-group">
-                  <label class="form-label" for="name">
-                    <i class="fas fa-user" aria-hidden="true"></i>
+
+              <form id="contact-form" class="styled-form" novalidate>
+                <div class="form-field">
+                  <label for="contact-name" class="field-label">
                     <span>Full Name</span>
+                    <span class="required-indicator">*</span>
                   </label>
-                  <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="Enter your full name"
-                    required
-                  />
+                  <div class="input-wrapper">
+                    <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="name"
+                      class="form-control"
+                      placeholder="e.g. John Doe"
+                      required
+                      minlength="2"
+                      aria-describedby="name-desc"
+                    />
+                  </div>
+                  <span id="name-desc" class="field-feedback">Please enter your name.</span>
                 </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="message">
-                    <i class="fas fa-comment-alt" aria-hidden="true"></i>
-                    <span>Message</span>
+                <div class="form-field">
+                  <label for="contact-email" class="field-label">
+                    <span>Email Address</span>
+                    <span class="required-indicator">*</span>
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell me about your project or inquiry..."
-                    required
-                  ></textarea>
+                  <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      class="form-control"
+                      placeholder="e.g. john@example.com"
+                      required
+                      aria-describedby="email-desc"
+                    />
+                  </div>
+                  <span id="email-desc" class="field-feedback">Please enter a valid email address.</span>
                 </div>
 
-                <button
-                  id="submit-btn"
-                  type="submit"
-                  class="submit-btn whatsapp-btn"
-                >
-                  <span>Send on WhatsApp</span>
-                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                </button>
+                <div class="form-field">
+                  <label for="contact-subject" class="field-label">
+                    <span>Inquiry Type</span>
+                  </label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-tag input-icon" aria-hidden="true"></i>
+                    <select id="contact-subject" name="subject" class="form-control">
+                      <option value="New Project Inquiry">New Project Inquiry</option>
+                      <option value="Full-Time / Contract Hiring">Full-Time / Contract Hiring</option>
+                      <option value="Freelance Web Development">Freelance Web Development</option>
+                      <option value="Consulting / Question">Consulting / General Question</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-message" class="field-label">
+                    <span>Your Message</span>
+                    <span class="required-indicator">*</span>
+                  </label>
+                  <div class="input-wrapper textarea-wrapper">
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      class="form-control"
+                      rows="5"
+                      placeholder="Tell me a bit about your project, timeline, or requirements..."
+                      required
+                      minlength="10"
+                      aria-describedby="message-desc"
+                    ></textarea>
+                  </div>
+                  <span id="message-desc" class="field-feedback">Please write a short message (at least 10 characters).</span>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-block submit-btn" id="submit-btn">
+                    <span>Send Message via WhatsApp</span>
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-block"
+                    id="email-fallback-btn"
+                  >
+                    <span>Or Draft via Email Client</span>
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <p class="form-privacy-note">
+                  <i class="fas fa-lock" aria-hidden="true"></i>
+                  <span>Your contact details are strictly used to reply to your inquiry.</span>
+                </p>
               </form>
             </div>
           </div>
@@ -1050,227 +1374,174 @@
       </section>
     </main>
 
+    <!-- Accessible Project Details Modal Dialog -->
+    <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+      <div class="modal-surface">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project modal">
+          <i class="fas fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal-body" id="modal-content">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </dialog>
+
     <!-- Footer -->
     <footer class="footer" id="footer">
-      <div class="container">
-        <div class="footer-main">
+      <div class="container footer-container">
+        <div class="footer-top">
           <div class="footer-brand">
-            <a href="#home" class="footer-logo" aria-label="Mumtaj Ali — Home">
-              <span class="footer-logo-icon">M</span>
-              <span class="footer-logo-name">Mumtaj Ali</span>
+            <a href="#home" class="footer-logo">
+              <span class="brand-monogram">MA</span>
+              <span class="brand-name">Mumtaj Ali</span>
             </a>
             <p class="footer-tagline">
-              Web developer &amp; UI designer building calm, high-performing
-              digital experiences for businesses, startups, and ambitious ideas.
+              Full Stack Web Developer &amp; UI Designer building reliable, responsive, and scalable
+              digital software with Laravel, PHP, JavaScript, and Python.
             </p>
-            <div class="footer-social" aria-label="Social media links">
-              <a
-                href="https://linkedin.com/in/mumtaj-ali-03865328b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://github.com/Mumtaj-A"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                title="GitHub"
-              >
+            <div class="footer-social-row">
+              <a href="https://github.com/Mumtaj-A" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fab fa-github"></i>
               </a>
-              <a
-                href="https://facebook.com/ali.mumtaz.338658"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                title="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://linkedin.com/in/mumtaj-ali-03865328b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
               </a>
-              <a
-                href="https://wa.me/919151542665"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                title="WhatsApp"
-              >
+              <a href="https://wa.me/919151542665" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="mailto:alimumtaj132@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
               </a>
             </div>
           </div>
 
-          <nav class="footer-column" aria-label="Footer navigation">
+          <nav class="footer-nav" aria-label="Footer Quick Links">
             <h4 class="footer-heading">Navigation</h4>
             <ul class="footer-links">
               <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#experience">Experience &amp; Education</a></li>
+              <li><a href="#projects">Featured Projects</a></li>
+              <li><a href="#skills">Technical Skills</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
 
-          <div class="footer-column">
-            <h4 class="footer-heading">Services</h4>
-            <ul class="footer-links footer-links-muted">
-              <li>Web Development</li>
-              <li>UI/UX Design</li>
-              <li>Frontend Development</li>
-              <li>Backend Development</li>
-              <li>Responsive Design</li>
+          <div class="footer-services">
+            <h4 class="footer-heading">Specializations</h4>
+            <ul class="footer-links">
+              <li>Full-Stack Web Apps</li>
+              <li>Laravel &amp; PHP MVC Systems</li>
+              <li>Responsive UI/UX Interfaces</li>
+              <li>MySQL Schema Design</li>
+              <li>REST API Integrations</li>
             </ul>
           </div>
 
-          <div class="footer-column">
-            <h4 class="footer-heading">Contact</h4>
-            <ul class="footer-contact-list">
+          <div class="footer-direct">
+            <h4 class="footer-heading">Direct Contact</h4>
+            <ul class="footer-contact-info">
               <li>
                 <i class="fas fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:alimumtaj132@gmail.com"
-                  >alimumtaj132@gmail.com</a
-                >
+                <a href="mailto:alimumtaj132@gmail.com">alimumtaj132@gmail.com</a>
               </li>
               <li>
                 <i class="fas fa-phone" aria-hidden="true"></i>
                 <a href="tel:+919151542665">+91 9151542665</a>
               </li>
               <li>
-                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                <span>Chandigarh, India</span>
+                <i class="fas fa-location-dot" aria-hidden="true"></i>
+                <span>Chandigarh, Punjab, India</span>
               </li>
             </ul>
-            <a href="#contact" class="footer-cta">
+            <a href="#contact" class="btn btn-sm btn-outline footer-cta-btn">
               <span>Start a Project</span>
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <p class="footer-note">
-              Open to freelance work, remote collaborations, and product builds.
-            </p>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p class="footer-copyright">
-            &copy; <span id="current-year"></span> <strong>Mumtaj Ali</strong>.
-            All rights reserved.
+          <p class="copyright-text">
+            &copy; <span id="current-year">2026</span> <strong>Mumtaj Ali</strong>. All rights reserved.
+          </p>
+          <p class="footer-credit">
+            Crafted with clean semantic HTML5, modern CSS, and vanilla JavaScript.
           </p>
         </div>
       </div>
     </footer>
 
-    <div class="floating-actions" role="group" aria-label="Quick actions">
+    <!-- Floating Utilities (WhatsApp Quick Reach & Back to Top) -->
+    <div class="floating-utilities" role="region" aria-label="Quick actions">
       <a
-        class="chat-with-us"
-        href="https://wa.me/919151542665?text=Hi%20Mumtaj%2C%20I%27d%20like%20to%20discuss%20a%20project."
+        href="https://wa.me/919151542665?text=Hi%20Mumtaj,%20I'd%20like%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Talk with Mumtaj on WhatsApp"
-        title="Talk with me on WhatsApp"
+        class="floating-whatsapp-btn"
+        aria-label="Direct message Mumtaj on WhatsApp"
+        title="Chat on WhatsApp"
       >
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        <span class="chat-action-label">Talk With Me</span>
+        <span class="floating-label">Chat with Me</span>
       </a>
+
       <button
-        class="back-to-top"
+        id="back-to-top"
+        class="back-to-top-btn"
         type="button"
         aria-label="Back to top"
-        title="Back to top"
+        title="Scroll to top"
       >
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
-        <span>Top</span>
       </button>
     </div>
 
-    <!-- Style Switcher -->
-    <div class="style-switcher">
-      <div class="style-switcher-toggler s-icon">
-        <i class="fas fa-cog fa-spin"></i>
+    <!-- ==============================================
+         FLOATING LIQUID GLASS MOBILE BOTTOM DOCK
+         (Inspired by Native Mobile App Dock Navigation)
+    =============================================== -->
+    <nav class="mobile-glass-dock" id="mobile-glass-dock" aria-label="Mobile Navigation Dock">
+      <div class="mobile-dock-surface">
+        <a href="#home" class="mobile-dock-btn active" data-section="home" aria-label="Navigate to Home">
+          <i class="fas fa-house" aria-hidden="true"></i>
+          <span class="mobile-dock-label">Home</span>
+        </a>
+
+        <a href="#about" class="mobile-dock-btn" data-section="about" aria-label="Navigate to About Me">
+          <i class="fas fa-user" aria-hidden="true"></i>
+          <span class="mobile-dock-label">About</span>
+        </a>
+
+        <!-- Center Radiant Elevated Experience Button -->
+        <a
+          href="#experience"
+          class="mobile-dock-btn mobile-dock-center"
+          data-section="experience"
+          aria-label="Work Experience &amp; Current Role at NextOne Solutions"
+          title="Work Experience"
+        >
+          <div class="center-btn-disc">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <span class="mobile-dock-label">Experience</span>
+        </a>
+
+        <a href="#projects" class="mobile-dock-btn" data-section="projects" aria-label="Navigate to Featured Projects">
+          <i class="fas fa-images" aria-hidden="true"></i>
+          <span class="mobile-dock-label">Projects</span>
+        </a>
+
+        <a href="#contact" class="mobile-dock-btn" data-section="contact" aria-label="Navigate to Contact">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span class="mobile-dock-label">Contact</span>
+        </a>
       </div>
-      <div class="day-night s-icon">
-        <i class="fas fa-moon"></i>
-      </div>
-      <div class="colors">
-        <span
-          style="background: #ec1839"
-          onclick="setTheme('theme-red')"
-          title="Red"
-        ></span>
-        <span
-          style="background: #fa5b0f"
-          onclick="setTheme('theme-orange')"
-          title="Orange"
-        ></span>
-        <span
-          style="background: #37b187"
-          onclick="setTheme('theme-green')"
-          title="Green"
-        ></span>
-        <span
-          style="background: #1854b4"
-          onclick="setTheme('theme-blue')"
-          title="Blue"
-        ></span>
-        <span
-          style="background: #f021b2"
-          onclick="setTheme('theme-pink')"
-          title="Pink"
-        ></span>
-        <span
-          style="background: #9333ea"
-          onclick="setTheme('theme-purple')"
-          title="Purple"
-        ></span>
-        <span
-          style="background: #06b6d4"
-          onclick="setTheme('theme-cyan')"
-          title="Cyan"
-        ></span>
-        <span
-          style="background: #14b8a6"
-          onclick="setTheme('theme-teal')"
-          title="Teal"
-        ></span>
-        <span
-          style="background: #f59e0b"
-          onclick="setTheme('theme-amber')"
-          title="Amber"
-        ></span>
-        <span
-          style="background: #ef4444"
-          onclick="setTheme('theme-rose')"
-          title="Rose"
-        ></span>
-        <span
-          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-          onclick="setTheme('theme-gradient-purple')"
-          title="Gradient Purple"
-        ></span>
-        <span
-          style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
-          onclick="setTheme('theme-gradient-pink')"
-          title="Gradient Pink"
-        ></span>
-        <span
-          style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
-          onclick="setTheme('theme-gradient-blue')"
-          title="Gradient Blue"
-        ></span>
-        <span
-          style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
-          onclick="setTheme('theme-gradient-mint')"
-          title="Gradient Mint"
-        ></span>
-        <span
-          style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
-          onclick="setTheme('theme-gradient-warm')"
-          title="Gradient Warm"
-        ></span>
-      </div>
-    </div>
+    </nav>
+
+    <!-- Toast Notification for Copy Actions -->
+    <div id="toast" class="toast-notification" role="status" aria-live="polite"></div>
 
     <!-- Scripts -->
     <script
@@ -1279,12 +1550,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="PersonalPort.js"></script>
-    <script src="style-switcher.js"></script>
   </body>
 </html>

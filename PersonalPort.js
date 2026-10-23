@@ -158,6 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // On mobile screens (<= 768px), the navbar only holds the top-right theme switch.
+      // Keeping it steadily visible stops the top button from flickering or blinking during touch scrolling.
+      if (window.innerWidth <= 768) {
+        navbar.classList.remove("nav-hidden");
+        ticking = false;
+        return;
+      }
+
       const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
       const scrollDelta = currentScrollY - lastScrollY;
       const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
@@ -203,33 +211,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if ("IntersectionObserver" in window) {
       const sectionObserver = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const currentId = entry.target.getAttribute("id");
+          // Filter to intersecting entries and select the most prominent one
+          // to prevent dock active state from rapidly flickering or blinking.
+          const intersectingEntries = entries.filter((e) => e.isIntersecting);
+          if (!intersectingEntries.length) return;
 
-              navLinks.forEach((link) => {
-                const href = link.getAttribute("href")?.replace("#", "");
-                if (href === currentId) {
-                  link.classList.add("active");
-                } else {
-                  link.classList.remove("active");
-                }
-              });
+          const topEntry = intersectingEntries.reduce((prev, curr) =>
+            curr.intersectionRatio > prev.intersectionRatio ? curr : prev
+          );
 
-              dockLinks.forEach((link) => {
-                const href = link.getAttribute("href")?.replace("#", "");
-                if (href === currentId) {
-                  link.classList.add("active");
-                } else {
-                  link.classList.remove("active");
-                }
-              });
-            }
+          const currentId = topEntry.target.getAttribute("id");
+
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href")?.replace("#", "");
+            link.classList.toggle("active", href === currentId);
+          });
+
+          dockLinks.forEach((link) => {
+            const href = link.getAttribute("href")?.replace("#", "");
+            link.classList.toggle("active", href === currentId);
           });
         },
         {
-          rootMargin: "-25% 0px -65% 0px",
-          threshold: 0,
+          rootMargin: "-20% 0px -55% 0px",
+          threshold: [0, 0.25, 0.5],
         }
       );
 
